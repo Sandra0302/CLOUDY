@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const factList = document.getElementById("fact-list");
+    const loadFactsButton = document.getElementById("load-facts");
+
+    // Array of autumn facts
+    const autumnFacts = [
+        "Autumn, also known as fall, is the season between summer and winter.",
+        "Leaves on trees change color during autumn, creating beautiful displays of red, orange, and yellow.",
+        "Harvest festivals are common during this season, celebrating the abundance of crops.",
+        "People often enjoy activities like apple picking and pumpkin carving in the fall.",
+        "The autumnal equinox marks the beginning of autumn and occurs around September 22nd."
+    ];
+
+    // Function to add facts to the list with neon effect
+    function addFacts() {
+        autumnFacts.forEach((fact) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = fact;
+            listItem.style.color = getRandomNeonColor(); // Add neon color
+            factList.appendChild(listItem);
+        });
+
+        // Disable the button after loading facts
+        loadFactsButton.disabled = true;
+    }
+
+    // Event listener for the "Load Facts" button
+    loadFactsButton.addEventListener("click", addFacts);
+
+    // Generate a random neon color
+    function getRandomNeonColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+})
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="autumn.css">
+    <title>Autumn Facts</title>
+</head>
+<body>
+    <header>
+        <h1>Autumn Facts</h1>
+    </header>
+    
+    <main>
+        <section class="fact-section">
+            <h2>Fun Facts About Autumn</h2>
+            <ul id="fact-list">
+                <!-- Facts will be added dynamically using JavaScript -->
+            </ul>
+            <button id="load-facts">Load Facts</button>
+        </section>
+        <img width="800" height="350" src="https://e0.pxfuel.com/wallpapers/617/615/desktop-wallpaper-autumn-lake-on-minnesota-autumn.jpg">
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Autumn Facts</p>
+    </footer>
+
+    <script src="autumn.js"></script>
+</body>
+</html>
+<style>
+    body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for header and footer */
+header, footer {
+    background: linear-gradient(45deg, #FFA500, #FF4500);
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Main content styling */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ecb37d;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fact-section {
+    margin-bottom: 20px;
+}
+
+/* Styling for the fact list */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Styling for the load facts button */
+#load-facts {
+    background: linear-gradient(45deg, #FFA500, #FF4500);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#load-facts:hover {
+    background: linear-gradient(45deg, #FF4500, #FFA500);
+}
+</style>

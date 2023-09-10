@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const factList = document.getElementById("fact-list");
+    const loadFactsButton = document.getElementById("load-facts");
+
+    // Array of spring facts
+    const springFacts = [
+        "Spring is the season of rebirth and renewal in nature.",
+        "Flowers bloom in spring, and trees grow new leaves.",
+        "Easter is a popular holiday celebrated during spring.",
+        "The spring equinox marks the beginning of spring and occurs around March 20th.",
+        "People often engage in gardening and outdoor activities during this season."
+    ];
+
+    // Function to add facts to the list with neon effect
+    function addFacts() {
+        springFacts.forEach((fact) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = fact;
+            listItem.style.color = getRandomNeonColor(); // Add neon color
+            factList.appendChild(listItem);
+        });
+
+        // Disable the button after loading facts
+        loadFactsButton.disabled = true;
+    }
+
+    // Event listener for the "Load Facts" button
+    loadFactsButton.addEventListener("click", addFacts);
+
+    // Generate a random neon color
+    function getRandomNeonColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+});
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="spring.css">
+    <title>Summer Facts</title>
+</head>
+<body>
+    <header>
+        <h1>Spring Facts</h1>
+    </header>
+    
+    <main>
+        <section class="fact-section">
+            <h2>Fun Facts About Summer</h2>
+            <ul id="fact-list">
+                <!-- Facts will be added dynamically using JavaScript -->
+            </ul>
+            <button id="load-facts">Load Facts</button>
+        </section>
+        <img width="800" src="https://cdn.shopify.com/s/files/1/0778/2679/files/bio_urn_trees_f3534a23-d838-4a12-87fc-4dcd5071ed8c_1024x1024.jpg?v=1584304157">
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Summer Facts</p>
+    </footer>
+
+    <script src="spr.js"></script>
+</body>
+</html>
+<style>
+    
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for header and footer */
+header, footer {
+    background: linear-gradient(45deg, #e187b1, #bc356b);
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Main content styling */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e3cfe4;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fact-section {
+    margin-bottom: 20px;
+}
+
+/* Styling for the fact list */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Styling for the load facts button */
+#load-facts {
+    background: linear-gradient(45deg, #cb4698, #bc236d);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#load-facts:hover {
+    background: linear-gradient(45deg,  #bc236d,#cb4698);
+}
+
+
+</style>

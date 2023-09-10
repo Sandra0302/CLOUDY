@@ -1,0 +1,53 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for header and footer */
+header, footer {
+    background: linear-gradient(45deg, #07a5fb, #1c1b65);
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Main content styling */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #a8bee1;
+    box-shadow: 0px 0px 10px rgba(104, 234, 226, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fact-section {
+    margin-bottom: 20px;
+}
+
+/* Styling for the fact list */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Styling for the load facts button */
+#load-facts {
+    background: linear-gradient(45deg, #07a5fb, #65d8f3);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#load-facts:hover {
+    background: linear-gradient(45deg, #1c1b65, #07a5fb);
+}

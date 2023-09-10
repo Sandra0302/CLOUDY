@@ -1,0 +1,106 @@
+.subscribe-button {
+  background-color: rgb(54, 140, 174);
+  color: white;
+  border: none;
+  height: 46px;
+  width: 05px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  transition: opacity 0.15s;
+}
+
+.subscribe-button:hover {
+  opacity: 0.7;
+}
+
+.subscribe-button:active {
+  opacity: 0.3;
+}
+
+/* Define neon button styles */
+.neonButton {
+  
+  background-color: rgb(54, 140, 174);
+  color: white;
+  border: skyblue;
+  height: 16px;
+  width: 2px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  transition: opacity 0.15s;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.neonButton:hover {
+  background-color: rgb(112, 112, 170);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.neonText {
+    color: #fff;
+    font-family: cursive;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px rgb(111, 204, 236),
+        0 0 82px rgb(137, 215, 239),
+        0 0 92px #0fa,
+        0 0 102px rgb(76, 219, 244),
+        0 0 151px rgb(70, 184, 209);
+  }
+  #showLinksButton{
+    color: #fff;
+    font-size: medium;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px rgb(111, 204, 236),
+        0 0 82px rgb(137, 215, 239),
+        0 0 92px #0fa,
+        0 0 102px rgb(76, 219, 244),
+        0 0 151px rgb(70, 184, 209);
+
+  }
+  
+  /* Additional styling */
+    
+  body {
+    font-size: 80px;
+    font-family: "Vibur", sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    background-image: url(megha.jpg); 
+    display: flex;
+    background-size: cover; /* Optional: Scale the background image to cover the entire container */
+    background-repeat: no-repeat; /* Optional: Prevent the background image from repeating */
+    background-position: center; /* Optional: Center the background image */
+}
+  
+  
+  h1, h2 {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: wavy;
+    font-weight: 400;
+  }
+    
+  h1 {
+      font-size: 4.2rem;
+  }
+    
+  h2 {
+      font-size: 1.8rem;
+  }
+  
+  .container {
+    margin-top: 20vh;
+  }
